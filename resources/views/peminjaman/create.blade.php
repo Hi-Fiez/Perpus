@@ -84,7 +84,7 @@
                             <label for="status_peminjam" class="col-md-4 control-label">Status Pinjam</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="status_peminjam" id="status_peminjam" required>
+                                <input type="text" class="form-control" name="status_peminjam" id="status_peminjam" value="Belum Kembali" required readonly>
 
                                 @if ($errors->has('status_peminjam'))
                                 <span class="help-block">

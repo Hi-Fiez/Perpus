@@ -110,6 +110,7 @@ class PeminjamanController extends Controller
             $stok = BookList::where('judul_buku', '=', $request->input('judul_buku'))->first();
             $total = $stok->stok + 1;
             $stok->stok = $total;        
+            $stok->save();
         }
         $table->save();
 
@@ -169,7 +170,7 @@ class PeminjamanController extends Controller
                     $sheet->setHeight(array(
                         '1' => '20'
                     ));
-                    $sheet->setWidth('A', '10');
+                    $sheet->setWidth('A', '25');
                     $sheet->setWidth('B', '25');
                     $sheet->setWidth('C', '25');
                     $sheet->setWidth('D', '25');
